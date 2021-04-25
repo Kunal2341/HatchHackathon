@@ -32,6 +32,18 @@ View below a described format of the dataset.
 Before I used the following format to encode the categorical variabled but it resulted errors with the `model.fit()`
 
 ```python
+def encode_string_categorical_feature(feature, name, dataset):
+    index = StringLookup()
+    feature_ds = dataset.map(lambda x, y: x[name])
+    feature_ds = feature_ds.map(lambda x: tf.expand_dims(x, -1))
+    index.adapt(feature_ds)
+    encoded_feature = index(feature)
+    encoder = CategoryEncoding(output_mode="binary")
+    feature_ds = feature_ds.map(index)
+    encoder.adapt(feature_ds)
+    encoded_feature = encoder(encoded_feature)
+    return encoded_feature
+    
 def encode_integer_categorical_feature(feature, name, dataset):
     encoder = CategoryEncoding(output_mode="binary")
 
@@ -42,6 +54,7 @@ def encode_integer_categorical_feature(feature, name, dataset):
     encoded_feature = encoder(feature)
     return encoded_feature
 ```
+
 # Problems faced
 There were a multifold set of problems I faced in all portions of the model, from desiging the model to trying to set up OCR for the document.
 **Data Fitting** --> The format of the data was especially challenging to make sure everything was clean under the dataframe. I ran a lot of **explict for-loops** resulting a much longer time to run the code making it unefficent, but as a matter of time I wasn't able to impliment **vectorization** to help speed up the process of formatting the data. On top of that there were a lot of `.replace("","")` programs used to help clean up the data which is very manually done which could have better been implimented with **regex**
