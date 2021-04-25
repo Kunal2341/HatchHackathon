@@ -26,7 +26,8 @@ I then used a keras model, with a simpler set of `dense` and extra `sequential` 
 When dealing with catergorical variables under a sequential model, there needs to be a form of encoding the data into a numerical format. I used a one-hot encoding design which takes all possible types of data and formats the points in a `0` and `1` design resulting in either having that value or not. As per `ethnicity` I had to condense the possible points to have a smaller data set. 
 
 View below a described format of the dataset. 
-<Insert markdownDescribeData.png>
+
+![Image of Desibing Data](https://github.com/Kunal2341/HatchHackathon/blob/main/readmeImgs/markdownDescribeData.png?raw=true)
 
 Before I used the following format to encode the categorical variabled but it resulted errors with the `model.fit()`
 
@@ -52,7 +53,7 @@ At the current tests, it is running at a **72**% cummalitive accuracy rate, but 
 
 ## Run the program -- Front-end UI
 I designed the UI for it to be run locally. Download the file name **streamlit.py** and run the following program in command line `streamlit run streamlit.py` after being in the same directory 
-
+![Image of UI](https://github.com/Kunal2341/HatchHackathon/blob/main/readmeImgs/markdownUISurvery.png?raw=true)
 <INSERT markdownUISurvery. png IMAGE>
 
 ## Run the program -- Install Libaries
