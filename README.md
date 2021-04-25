@@ -1,5 +1,7 @@
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
+
 # Hatch Hackathon `Domo Arigato Mr. Roboto`
-Program for HATCH 2021 progect of `Domo Arigato Mr. Roboto`
+Program for HATCH 2021 progect of `Domo Arigato Mr. Roboto` --> All code is on `VisualizingDataNEW.ipynb`
 # Abstract
 In this problem, there is a massive dataset provided to us where we have to create a model that will predict the level for a user's `history_class` between **strong_personal**, **strong_family**, **not_strong**, and **none**. There were many different criteria points that went into deciding this problem. I designed an sequential model under keras which accuratly detects the history class for any user. I also designed an **UI** for front end user design (*still in development*).
 
