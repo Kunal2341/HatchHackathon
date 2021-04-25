@@ -16,11 +16,19 @@ With futher research and data analysis, I concluded that there were multiple dat
 
 When dealing with `rel_age`, `rel_cancer`, and `rel_relation` criteria points, I had to design such a program that will adapt to the different *check-box* format questions. For example for `rel_relation`, the user could select multiple different options out of a set of options. After generateing a list of all possible options, I was able to control the type of data going through the model. (Example List Relationship: `['brother', 'sister', 'mother', 'father', 'aunt', 'uncle', 'grandfather', 'grandmother', 'great aunt', 'great uncle', 'great grandfather', 'great grandmother', 'cousin', 'niece', 'daughter']`) 
 
+Relation of the data for 4 variables is shown 
+
+![Image of relation of data](https://github.com/Kunal2341/HatchHackathon/blob/main/readmeImgs/markdownRelationOfData.png?raw=true)
+
+
 # Model Design
 To begin, I used a keras model with taking in all the data points as in input layer, and then a couple of `Dense` and `dropout` layers. After multiple series of tests, I noticed that the results are lower than expected which resulted in a unncessary amount of complexity.  (*Scroll down to see full model builds*)
 
 I then used a keras model, with a simpler set of `dense` and extra `sequential` layers resulting in a more cleaner design of the model. I also used **adam** feature to optimize the model with the following $Adam Optimixation - 1*10^3$ [*github doesn't support latex*] formula. 
 
+## Loss Graph
+Image of loss graph is shown below
+![Loss Graph](https://github.com/Kunal2341/HatchHackathon/blob/main/readmeImgs/markdownlossGraph1.png?raw=true)
 
 ## One-hot encoding design
 When dealing with catergorical variables under a sequential model, there needs to be a form of encoding the data into a numerical format. I used a one-hot encoding design which takes all possible types of data and formats the points in a `0` and `1` design resulting in either having that value or not. As per `ethnicity` I had to condense the possible points to have a smaller data set. 
