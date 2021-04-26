@@ -66,8 +66,11 @@ def encode_integer_categorical_feature(feature, name, dataset):
 
 # Problems faced
 There were a multifold set of problems I faced in all portions of the model, from desiging the model to trying to set up OCR for the document.
+
 **Data Fitting** --> The format of the data was especially challenging to make sure everything was clean under the dataframe. I ran a lot of **explicit for-loops** resulting a much longer time to run the code making it inefficient, but as a matter of time, I wasn't able to implement **vectorization** to help speed up the process of formatting the data. On top of that, there were a lot of `.replace("","")` programs used to help clean up the data which is very manually done which could have better been implemented with **regex**
+
 **Model** -->  When *fitting* and *training* the model I there were many errors with the **data type** including varying from `float`, `int64`, and `string` types using `df.dtypes()` as shown below. There were also challenged with formatting the input and output layers to match the data formats: `AssertionError: Could not compute output Tensor("Outputlayer/Sigmoid_20:0", shape=(None, 1), dtype=float32)` 
+
 **OCR Document** --> I hoped to write a program where the user would upload the document and using OCR and location mapping on the document, extract the writing information from the **DomoArigatoSurvey** document. 
 
 # Accuracy
